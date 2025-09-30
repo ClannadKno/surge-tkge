@@ -1,0 +1,472 @@
+2025-09-28 18:36:39.381066 Using folder: config/surge
+2025-09-28 18:36:39.381149 Configuration:
+2025-09-28 18:36:39.390085   KvsAll:
+2025-09-28 18:36:39.390102     label_smoothing: 0.0
+2025-09-28 18:36:39.390110     query_types:
+2025-09-28 18:36:39.390118       _po: true
+2025-09-28 18:36:39.390125       s_o: false
+2025-09-28 18:36:39.390133       sp_: true
+2025-09-28 18:36:39.390140   ax_search:
+2025-09-28 18:36:39.390147     num_sobol_trials: -1
+2025-09-28 18:36:39.390155     num_trials: 10
+2025-09-28 18:36:39.390162     parameter_constraints: []
+2025-09-28 18:36:39.390169     parameters: []
+2025-09-28 18:36:39.390177     sobol_seed: 0
+2025-09-28 18:36:39.390184   dataset:
+2025-09-28 18:36:39.390191     +++: +++
+2025-09-28 18:36:39.390199     files:
+2025-09-28 18:36:39.390206       +++: +++
+2025-09-28 18:36:39.390214       entity_ids:
+2025-09-28 18:36:39.390221         filename: entity_ids.del
+2025-09-28 18:36:39.390229         type: map
+2025-09-28 18:36:39.390236       entity_strings:
+2025-09-28 18:36:39.390243         filename: entity_ids.del
+2025-09-28 18:36:39.390251         type: map
+2025-09-28 18:36:39.390258       relation_ids:
+2025-09-28 18:36:39.390266         filename: relation_ids.del
+2025-09-28 18:36:39.390273         type: map
+2025-09-28 18:36:39.390281       relation_strings:
+2025-09-28 18:36:39.390289         filename: relation_ids.del
+2025-09-28 18:36:39.390296         type: map
+2025-09-28 18:36:39.390304       test:
+2025-09-28 18:36:39.390311         filename: test.del
+2025-09-28 18:36:39.390319         type: triples
+2025-09-28 18:36:39.390326       train:
+2025-09-28 18:36:39.390336         filename: train.del
+2025-09-28 18:36:39.390344         type: triples
+2025-09-28 18:36:39.390351       valid:
+2025-09-28 18:36:39.390358         filename: valid.del
+2025-09-28 18:36:39.390366         type: triples
+2025-09-28 18:36:39.390373     name: yago
+2025-09-28 18:36:39.390381     num_entities: -1
+2025-09-28 18:36:39.390388     num_relations: -1
+2025-09-28 18:36:39.390395     pickle: true
+2025-09-28 18:36:39.390403   eval:
+2025-09-28 18:36:39.390410     batch_size: 256
+2025-09-28 18:36:39.390417     case_study_enable: false
+2025-09-28 18:36:39.390425     case_study_k: 10
+2025-09-28 18:36:39.390432     case_study_output_file: /home/amax/sjw/TKGElib/local/case_study_results.txt
+2025-09-28 18:36:39.390440     case_study_size: 20
+2025-09-28 18:36:39.390447     chunk_size: -1
+2025-09-28 18:36:39.390454     filter_splits:
+2025-09-28 18:36:39.390462     - train
+2025-09-28 18:36:39.390469     - valid
+2025-09-28 18:36:39.390476     filter_with_test: true
+2025-09-28 18:36:39.390483     hits_at_k_s:
+2025-09-28 18:36:39.390491     - 1
+2025-09-28 18:36:39.390498     - 3
+2025-09-28 18:36:39.390505     - 10
+2025-09-28 18:36:39.390513     metrics_per:
+2025-09-28 18:36:39.390520       argument_frequency: false
+2025-09-28 18:36:39.390527       head_and_tail: false
+2025-09-28 18:36:39.390535       relation_type: true
+2025-09-28 18:36:39.390543     num_workers: 0
+2025-09-28 18:36:39.390550     pin_memory: false
+2025-09-28 18:36:39.390557     split: valid
+2025-09-28 18:36:39.390564     tie_handling: best_rank
+2025-09-28 18:36:39.390572     trace_level: example
+2025-09-28 18:36:39.390579     type: entity_ranking
+2025-09-28 18:36:39.390586   grid_search:
+2025-09-28 18:36:39.390594     parameters:
+2025-09-28 18:36:39.390601       +++: +++
+2025-09-28 18:36:39.390608     run: true
+2025-09-28 18:36:39.390616   import: surge
+2025-09-28 18:36:39.390623   job:
+2025-09-28 18:36:39.390630     device: cuda:1
+2025-09-28 18:36:39.390638     multi_gpu: false
+2025-09-28 18:36:39.390645     type: eval
+2025-09-28 18:36:39.390653   lookup_embedder:
+2025-09-28 18:36:39.390666     class_name: LookupEmbedder
+2025-09-28 18:36:39.390674     dim: 320
+2025-09-28 18:36:39.390681     dropout: 0.0
+2025-09-28 18:36:39.390689     initialize: normal_
+2025-09-28 18:36:39.390696     initialize_args:
+2025-09-28 18:36:39.390703       +++: +++
+2025-09-28 18:36:39.390711       normal_:
+2025-09-28 18:36:39.390718         std: 0.02
+2025-09-28 18:36:39.390725     normalize:
+2025-09-28 18:36:39.390732       p: -1.0
+2025-09-28 18:36:39.390740       with_grad: false
+2025-09-28 18:36:39.390747     regularize: lp
+2025-09-28 18:36:39.390754     regularize_args:
+2025-09-28 18:36:39.390762       +++: +++
+2025-09-28 18:36:39.390769       p: 2
+2025-09-28 18:36:39.390777       weighted: false
+2025-09-28 18:36:39.390784     regularize_weight: 0.0
+2025-09-28 18:36:39.390791     round_dim_to: []
+2025-09-28 18:36:39.390798     sparse: false
+2025-09-28 18:36:39.390806   manual_search:
+2025-09-28 18:36:39.390813     configurations: []
+2025-09-28 18:36:39.390821     run: true
+2025-09-28 18:36:39.390828   model: surge
+2025-09-28 18:36:39.390835   negative_sampling:
+2025-09-28 18:36:39.390842     chunk_size: -1
+2025-09-28 18:36:39.390850     filtering:
+2025-09-28 18:36:39.390857       implementation: fast_if_available
+2025-09-28 18:36:39.390864       o: false
+2025-09-28 18:36:39.390871       p: false
+2025-09-28 18:36:39.390879       s: false
+2025-09-28 18:36:39.390886       split: ''
+2025-09-28 18:36:39.390893     frequency:
+2025-09-28 18:36:39.390901       smoothing: 1
+2025-09-28 18:36:39.390908     implementation: triple
+2025-09-28 18:36:39.390915     num_samples:
+2025-09-28 18:36:39.390923       o: -1
+2025-09-28 18:36:39.390930       p: 0
+2025-09-28 18:36:39.390938       s: 3
+2025-09-28 18:36:39.390945     sampling_type: uniform
+2025-09-28 18:36:39.390952     shared: false
+2025-09-28 18:36:39.390960     with_replacement: true
+2025-09-28 18:36:39.390967   random_seed:
+2025-09-28 18:36:39.390974     numpy: 333
+2025-09-28 18:36:39.390982     python: 333
+2025-09-28 18:36:39.390989     torch: 339
+2025-09-28 18:36:39.390996   search:
+2025-09-28 18:36:39.391004     device_pool: []
+2025-09-28 18:36:39.391011     num_workers: 1
+2025-09-28 18:36:39.391019     on_error: abort
+2025-09-28 18:36:39.391026     type: ax
+2025-09-28 18:36:39.391034   surge:
+2025-09-28 18:36:39.391042     activation: gelu
+2025-09-28 18:36:39.391049     adaptive_window: true
+2025-09-28 18:36:39.391057     add_mlm_loss: true
+2025-09-28 18:36:39.391064     attn_dropout: 0.1
+2025-09-28 18:36:39.391071     base_time_window: 15
+2025-09-28 18:36:39.391078     class_name: SURGE
+2025-09-28 18:36:39.391086     ctx_dropout: 0.3
+2025-09-28 18:36:39.391093     dim: -1
+2025-09-28 18:36:39.391100     entity_embedder:
+2025-09-28 18:36:39.391108       +++: +++
+2025-09-28 18:36:39.391115       type: lookup_embedder
+2025-09-28 18:36:39.391123     ff_dim: 512
+2025-09-28 18:36:39.391130     hidden_dropout: 0.1
+2025-09-28 18:36:39.391138     initializer_range: 0.02
+2025-09-28 18:36:39.391145     max_context_size: 50
+2025-09-28 18:36:39.391152     max_temporal_hops: 2
+2025-09-28 18:36:39.391159     max_time_window: 60
+2025-09-28 18:36:39.391167     mlm_mask: 0.0
+2025-09-28 18:36:39.391174     mlm_replace: 0.5
+2025-09-28 18:36:39.391181     nhead: 8
+2025-09-28 18:36:39.391189     nlayer: 8
+2025-09-28 18:36:39.391196     output_dropout: 0.6
+2025-09-28 18:36:39.391203     rel_dropout: 0.0
+2025-09-28 18:36:39.391211     relation_embedder:
+2025-09-28 18:36:39.391218       +++: +++
+2025-09-28 18:36:39.391226       type: lookup_embedder
+2025-09-28 18:36:39.391233     self_dropout: 0.5
+2025-09-28 18:36:39.391240     similarity: DotProduct
+2025-09-28 18:36:39.391247     temporal_decay: 0.15
+2025-09-28 18:36:39.391255     time_embedder:
+2025-09-28 18:36:39.391262       +++: +++
+2025-09-28 18:36:39.391270       type: lookup_embedder
+2025-09-28 18:36:39.391278     transformer_impl: huggingface
+2025-09-28 18:36:39.391285     use_preln: false
+2025-09-28 18:36:39.391292     use_rat: false
+2025-09-28 18:36:39.391300   train:
+2025-09-28 18:36:39.391307     abort_on_nan: true
+2025-09-28 18:36:39.391315     auto_correct: true
+2025-09-28 18:36:39.391322     batch_size: 256
+2025-09-28 18:36:39.391329     checkpoint:
+2025-09-28 18:36:39.391337       every: 5
+2025-09-28 18:36:39.391344       keep: 3
+2025-09-28 18:36:39.391352     filt_loss: false
+2025-09-28 18:36:39.391359     loss: kl
+2025-09-28 18:36:39.391366     loss_arg: .nan
+2025-09-28 18:36:39.391374     lr_scheduler: ''
+2025-09-28 18:36:39.391381     lr_scheduler_args:
+2025-09-28 18:36:39.391388       +++: +++
+2025-09-28 18:36:39.391396     max_epochs: 1000
+2025-09-28 18:36:39.391427     num_workers: 0
+2025-09-28 18:36:39.391435     optimizer: Adamax
+2025-09-28 18:36:39.391443     optimizer_args:
+2025-09-28 18:36:39.391450       +++: +++
+2025-09-28 18:36:39.391458       eps: 1.0e-06
+2025-09-28 18:36:39.391465       lr: 0.02
+2025-09-28 18:36:39.391473       max_grad_norm: 1.0
+2025-09-28 18:36:39.391480       schedule: warmup_linear_xdl
+2025-09-28 18:36:39.391487       warmup: 0.1
+2025-09-28 18:36:39.391495       weight_decay: 0.01
+2025-09-28 18:36:39.391502     pin_memory: false
+2025-09-28 18:36:39.391509     split: train
+2025-09-28 18:36:39.391516     trace_level: epoch
+2025-09-28 18:36:39.391524     type: 1vsAll
+2025-09-28 18:36:39.391531     update_freq: 1
+2025-09-28 18:36:39.391538     visualize_graph: false
+2025-09-28 18:36:39.391546   user:
+2025-09-28 18:36:39.391553     +++: +++
+2025-09-28 18:36:39.391561   valid:
+2025-09-28 18:36:39.391568     early_stopping:
+2025-09-28 18:36:39.391575       min_threshold:
+2025-09-28 18:36:39.391583         epochs: 50
+2025-09-28 18:36:39.391590         metric_value: 0.05
+2025-09-28 18:36:39.391598       patience: 10
+2025-09-28 18:36:39.391605     every: 3
+2025-09-28 18:36:39.391613     metric: mean_reciprocal_rank_filtered_with_test
+2025-09-28 18:36:39.391620     metric_expr: float("nan")
+2025-09-28 18:36:39.391628     split: valid
+2025-09-28 18:36:39.391635     trace_level: epoch
+2025-09-28 18:36:39.391642   verbose: true
+2025-09-28 18:36:39.429803   git commit: No working git repository found.
+2025-09-28 18:36:39.432256 Loading configuration of dataset yago...
+2025-09-28 18:36:39.443136 Loaded 10623 keys from map entity_ids
+2025-09-28 18:36:39.443407 Loaded 10 keys from map relation_ids
+2025-09-28 18:36:39.443627 Loaded 73 keys from map time_ids
+2025-09-28 18:36:39.447724 Loaded 28758 train triples
+2025-09-28 18:36:39.448197 Loaded 3499 valid triples
+2025-09-28 18:36:39.448615 Loaded 3471 test triples
+2025-09-28 18:36:41.737980   Neighbors index finished
+2025-09-28 18:36:42.910323   10146 distinct sp pairs in train
+2025-09-28 18:36:43.340105   6311 distinct po pairs in train
+2025-09-28 18:36:43.435909   1770 distinct sp pairs in valid
+2025-09-28 18:36:43.500548   1191 distinct po pairs in valid
+2025-09-28 18:36:43.595313   1729 distinct sp pairs in test
+2025-09-28 18:36:43.668362   1151 distinct po pairs in test
+2025-09-28 18:36:45.410165 Loaded relation index
+2025-09-28 18:36:45.410271   8 relations of type M-N
+2025-09-28 18:36:45.410315   2 relations of type M-1
+2025-09-28 18:47:43.829084 Using folder: config/surge
+2025-09-28 18:47:43.829172 Configuration:
+2025-09-28 18:47:43.838300   KvsAll:
+2025-09-28 18:47:43.838316     label_smoothing: 0.0
+2025-09-28 18:47:43.838323     query_types:
+2025-09-28 18:47:43.838329       _po: true
+2025-09-28 18:47:43.838335       s_o: false
+2025-09-28 18:47:43.838342       sp_: true
+2025-09-28 18:47:43.838348   ax_search:
+2025-09-28 18:47:43.838356     num_sobol_trials: -1
+2025-09-28 18:47:43.838363     num_trials: 10
+2025-09-28 18:47:43.838370     parameter_constraints: []
+2025-09-28 18:47:43.838377     parameters: []
+2025-09-28 18:47:43.838385     sobol_seed: 0
+2025-09-28 18:47:43.838392   dataset:
+2025-09-28 18:47:43.838399     +++: +++
+2025-09-28 18:47:43.838406     files:
+2025-09-28 18:47:43.838414       +++: +++
+2025-09-28 18:47:43.838421       entity_ids:
+2025-09-28 18:47:43.838428         filename: entity_ids.del
+2025-09-28 18:47:43.838435         type: map
+2025-09-28 18:47:43.838443       entity_strings:
+2025-09-28 18:47:43.838450         filename: entity_ids.del
+2025-09-28 18:47:43.838458         type: map
+2025-09-28 18:47:43.838465       relation_ids:
+2025-09-28 18:47:43.838472         filename: relation_ids.del
+2025-09-28 18:47:43.838480         type: map
+2025-09-28 18:47:43.838487       relation_strings:
+2025-09-28 18:47:43.838494         filename: relation_ids.del
+2025-09-28 18:47:43.838502         type: map
+2025-09-28 18:47:43.838509       test:
+2025-09-28 18:47:43.838517         filename: test.del
+2025-09-28 18:47:43.838524         type: triples
+2025-09-28 18:47:43.838531       train:
+2025-09-28 18:47:43.838538         filename: train.del
+2025-09-28 18:47:43.838546         type: triples
+2025-09-28 18:47:43.838553       valid:
+2025-09-28 18:47:43.838560         filename: valid.del
+2025-09-28 18:47:43.838568         type: triples
+2025-09-28 18:47:43.838575     name: yago
+2025-09-28 18:47:43.838582     num_entities: -1
+2025-09-28 18:47:43.838590     num_relations: -1
+2025-09-28 18:47:43.838597     pickle: true
+2025-09-28 18:47:43.838605   eval:
+2025-09-28 18:47:43.838612     batch_size: 256
+2025-09-28 18:47:43.838619     case_study_enable: false
+2025-09-28 18:47:43.838627     case_study_k: 10
+2025-09-28 18:47:43.838635     case_study_output_file: /home/amax/sjw/TKGElib/local/case_study_results.txt
+2025-09-28 18:47:43.838642     case_study_size: 20
+2025-09-28 18:47:43.838650     chunk_size: -1
+2025-09-28 18:47:43.838664     filter_splits:
+2025-09-28 18:47:43.838672     - train
+2025-09-28 18:47:43.838683     - valid
+2025-09-28 18:47:43.838693     filter_with_test: true
+2025-09-28 18:47:43.838703     hits_at_k_s:
+2025-09-28 18:47:43.838714     - 1
+2025-09-28 18:47:43.838724     - 3
+2025-09-28 18:47:43.838735     - 10
+2025-09-28 18:47:43.838743     metrics_per:
+2025-09-28 18:47:43.838751       argument_frequency: false
+2025-09-28 18:47:43.838758       head_and_tail: false
+2025-09-28 18:47:43.838766       relation_type: true
+2025-09-28 18:47:43.838774     num_workers: 0
+2025-09-28 18:47:43.838781     pin_memory: false
+2025-09-28 18:47:43.838787     split: valid
+2025-09-28 18:47:43.838794     tie_handling: best_rank
+2025-09-28 18:47:43.838802     trace_level: example
+2025-09-28 18:47:43.838809     type: entity_ranking
+2025-09-28 18:47:43.838816   grid_search:
+2025-09-28 18:47:43.838824     parameters:
+2025-09-28 18:47:43.838831       +++: +++
+2025-09-28 18:47:43.838838     run: true
+2025-09-28 18:47:43.838846   import: surge
+2025-09-28 18:47:43.838854   job:
+2025-09-28 18:47:43.838864     device: cuda:1
+2025-09-28 18:47:43.838876     multi_gpu: false
+2025-09-28 18:47:43.838884     type: eval
+2025-09-28 18:47:43.838892   lookup_embedder:
+2025-09-28 18:47:43.838899     class_name: LookupEmbedder
+2025-09-28 18:47:43.838905     dim: 320
+2025-09-28 18:47:43.838911     dropout: 0.0
+2025-09-28 18:47:43.838917     initialize: normal_
+2025-09-28 18:47:43.838923     initialize_args:
+2025-09-28 18:47:43.838929       +++: +++
+2025-09-28 18:47:43.838935       normal_:
+2025-09-28 18:47:43.838941         std: 0.02
+2025-09-28 18:47:43.838948     normalize:
+2025-09-28 18:47:43.838958       p: -1.0
+2025-09-28 18:47:43.838966       with_grad: false
+2025-09-28 18:47:43.838972     regularize: lp
+2025-09-28 18:47:43.838979     regularize_args:
+2025-09-28 18:47:43.838986       +++: +++
+2025-09-28 18:47:43.838993       p: 2
+2025-09-28 18:47:43.839001       weighted: false
+2025-09-28 18:47:43.839009     regularize_weight: 0.0
+2025-09-28 18:47:43.839016     round_dim_to: []
+2025-09-28 18:47:43.839023     sparse: false
+2025-09-28 18:47:43.839030   manual_search:
+2025-09-28 18:47:43.839038     configurations: []
+2025-09-28 18:47:43.839045     run: true
+2025-09-28 18:47:43.839052   model: surge
+2025-09-28 18:47:43.839060   negative_sampling:
+2025-09-28 18:47:43.839067     chunk_size: -1
+2025-09-28 18:47:43.839075     filtering:
+2025-09-28 18:47:43.839082       implementation: fast_if_available
+2025-09-28 18:47:43.839090       o: false
+2025-09-28 18:47:43.839097       p: false
+2025-09-28 18:47:43.839104       s: false
+2025-09-28 18:47:43.839111       split: ''
+2025-09-28 18:47:43.839119     frequency:
+2025-09-28 18:47:43.839126       smoothing: 1
+2025-09-28 18:47:43.839134     implementation: triple
+2025-09-28 18:47:43.839141     num_samples:
+2025-09-28 18:47:43.839148       o: -1
+2025-09-28 18:47:43.839155       p: 0
+2025-09-28 18:47:43.839163       s: 3
+2025-09-28 18:47:43.839170     sampling_type: uniform
+2025-09-28 18:47:43.839178     shared: false
+2025-09-28 18:47:43.839185     with_replacement: true
+2025-09-28 18:47:43.839193   random_seed:
+2025-09-28 18:47:43.839200     numpy: 333
+2025-09-28 18:47:43.839207     python: 333
+2025-09-28 18:47:43.839215     torch: 339
+2025-09-28 18:47:43.839222   search:
+2025-09-28 18:47:43.839229     device_pool: []
+2025-09-28 18:47:43.839237     num_workers: 1
+2025-09-28 18:47:43.839244     on_error: abort
+2025-09-28 18:47:43.839252     type: ax
+2025-09-28 18:47:43.839259   surge:
+2025-09-28 18:47:43.839266     activation: gelu
+2025-09-28 18:47:43.839273     adaptive_window: true
+2025-09-28 18:47:43.839281     add_mlm_loss: true
+2025-09-28 18:47:43.839288     attn_dropout: 0.1
+2025-09-28 18:47:43.839295     base_time_window: 15
+2025-09-28 18:47:43.839303     class_name: SURGE
+2025-09-28 18:47:43.839310     ctx_dropout: 0.3
+2025-09-28 18:47:43.839318     dim: -1
+2025-09-28 18:47:43.839325     entity_embedder:
+2025-09-28 18:47:43.839332       +++: +++
+2025-09-28 18:47:43.839339       type: lookup_embedder
+2025-09-28 18:47:43.839347     ff_dim: 512
+2025-09-28 18:47:43.839354     hidden_dropout: 0.1
+2025-09-28 18:47:43.839361     initializer_range: 0.02
+2025-09-28 18:47:43.839369     max_context_size: 50
+2025-09-28 18:47:43.839376     max_temporal_hops: 2
+2025-09-28 18:47:43.839383     max_time_window: 60
+2025-09-28 18:47:43.839390     mlm_mask: 0.0
+2025-09-28 18:47:43.839398     mlm_replace: 0.5
+2025-09-28 18:47:43.839405     nhead: 8
+2025-09-28 18:47:43.839412     nlayer: 8
+2025-09-28 18:47:43.839420     output_dropout: 0.6
+2025-09-28 18:47:43.839427     rel_dropout: 0.0
+2025-09-28 18:47:43.839434     relation_embedder:
+2025-09-28 18:47:43.839442       +++: +++
+2025-09-28 18:47:43.839449       type: lookup_embedder
+2025-09-28 18:47:43.839456     self_dropout: 0.5
+2025-09-28 18:47:43.839463     similarity: DotProduct
+2025-09-28 18:47:43.839471     temporal_decay: 0.15
+2025-09-28 18:47:43.839478     time_embedder:
+2025-09-28 18:47:43.839486       +++: +++
+2025-09-28 18:47:43.839493       type: lookup_embedder
+2025-09-28 18:47:43.839501     transformer_impl: huggingface
+2025-09-28 18:47:43.839508     use_preln: false
+2025-09-28 18:47:43.839515     use_rat: false
+2025-09-28 18:47:43.839522   train:
+2025-09-28 18:47:43.839530     abort_on_nan: true
+2025-09-28 18:47:43.839537     auto_correct: true
+2025-09-28 18:47:43.839545     batch_size: 256
+2025-09-28 18:47:43.839552     checkpoint:
+2025-09-28 18:47:43.839559       every: 5
+2025-09-28 18:47:43.839566       keep: 3
+2025-09-28 18:47:43.839573     filt_loss: false
+2025-09-28 18:47:43.839580     loss: kl
+2025-09-28 18:47:43.839588     loss_arg: .nan
+2025-09-28 18:47:43.839595     lr_scheduler: ''
+2025-09-28 18:47:43.839603     lr_scheduler_args:
+2025-09-28 18:47:43.839610       +++: +++
+2025-09-28 18:47:43.839617     max_epochs: 1000
+2025-09-28 18:47:43.839654     num_workers: 0
+2025-09-28 18:47:43.839670     optimizer: Adamax
+2025-09-28 18:47:43.839677     optimizer_args:
+2025-09-28 18:47:43.839685       +++: +++
+2025-09-28 18:47:43.839692       eps: 1.0e-06
+2025-09-28 18:47:43.839700       lr: 0.02
+2025-09-28 18:47:43.839707       max_grad_norm: 1.0
+2025-09-28 18:47:43.839714       schedule: warmup_linear_xdl
+2025-09-28 18:47:43.839722       warmup: 0.1
+2025-09-28 18:47:43.839729       weight_decay: 0.01
+2025-09-28 18:47:43.839736     pin_memory: false
+2025-09-28 18:47:43.839744     split: train
+2025-09-28 18:47:43.839751     trace_level: epoch
+2025-09-28 18:47:43.839758     type: 1vsAll
+2025-09-28 18:47:43.839765     update_freq: 1
+2025-09-28 18:47:43.839772     visualize_graph: false
+2025-09-28 18:47:43.839780   user:
+2025-09-28 18:47:43.839787     +++: +++
+2025-09-28 18:47:43.839794   valid:
+2025-09-28 18:47:43.839802     early_stopping:
+2025-09-28 18:47:43.839809       min_threshold:
+2025-09-28 18:47:43.839818         epochs: 50
+2025-09-28 18:47:43.839825         metric_value: 0.05
+2025-09-28 18:47:43.839832       patience: 10
+2025-09-28 18:47:43.839839     every: 3
+2025-09-28 18:47:43.839847     metric: mean_reciprocal_rank_filtered_with_test
+2025-09-28 18:47:43.839855     metric_expr: float("nan")
+2025-09-28 18:47:43.839862     split: valid
+2025-09-28 18:47:43.839869     trace_level: epoch
+2025-09-28 18:47:43.839877   verbose: true
+2025-09-28 18:47:43.864518   git commit: No working git repository found.
+2025-09-28 18:47:43.865694 Loading configuration of dataset yago...
+2025-09-28 18:47:43.871572 Loaded 10623 keys from map entity_ids
+2025-09-28 18:47:43.871750 Loaded 10 keys from map relation_ids
+2025-09-28 18:47:43.871892 Loaded 73 keys from map time_ids
+2025-09-28 18:47:43.874631 Loaded 28758 train triples
+2025-09-28 18:47:43.875049 Loaded 3499 valid triples
+2025-09-28 18:47:43.875411 Loaded 3471 test triples
+2025-09-28 18:47:46.433345   Neighbors index finished
+2025-09-28 18:47:47.438382   10146 distinct sp pairs in train
+2025-09-28 18:47:47.863730   6311 distinct po pairs in train
+2025-09-28 18:47:47.961645   1770 distinct sp pairs in valid
+2025-09-28 18:47:48.027095   1191 distinct po pairs in valid
+2025-09-28 18:47:48.123368   1729 distinct sp pairs in test
+2025-09-28 18:47:48.186784   1151 distinct po pairs in test
+2025-09-28 18:47:50.266302 Loaded relation index
+2025-09-28 18:47:50.266388   8 relations of type M-N
+2025-09-28 18:47:50.266419   2 relations of type M-1
+2025-09-28 18:47:58.979433 Traceback (most recent call last):
+2025-09-28 18:47:58.979459   File "/home/disk2/sjw/TKGElib-baseline/kge/cli.py", line 296, in main
+2025-09-28 18:47:58.979462     job.run()
+2025-09-28 18:47:58.979465   File "/home/amax/miniconda3/envs/eceformer/lib/python3.7/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+2025-09-28 18:47:58.979467     return func(*args, **kwargs)
+2025-09-28 18:47:58.979470   File "/home/disk2/sjw/TKGElib-baseline/kge/job/entity_ranking.py", line 182, in run
+2025-09-28 18:47:58.979472     scores = self.model("score_sp_po", s, p, o, t, None)
+2025-09-28 18:47:58.979474   File "/home/amax/miniconda3/envs/eceformer/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+2025-09-28 18:47:58.979477     return forward_call(*input, **kwargs)
+2025-09-28 18:47:58.979479   File "/home/disk2/sjw/TKGElib-baseline/kge/model/surge.py", line 778, in forward
+2025-09-28 18:47:58.979481     scores = getattr(self, fn_name)(*args, **kwargs)
+2025-09-28 18:47:58.979483   File "/home/disk2/sjw/TKGElib-baseline/kge/model/surge.py", line 840, in score_sp_po
+2025-09-28 18:47:58.979486     sp_scores = self._scorer.score_emb(s_emb, p_emb, all_entities, t_emb, "sp_", s, None)[0]
+2025-09-28 18:47:58.979488   File "/home/disk2/sjw/TKGElib-baseline/kge/model/surge.py", line 762, in score_emb
+2025-09-28 18:47:58.979490     out = self._scoring(s_emb, p_emb, o_emb, t_emb, combine.startswith('spo'), s, gt_ent, gt_rel, gt_tim, t_ids)
+2025-09-28 18:47:58.979492   File "/home/disk2/sjw/TKGElib-baseline/kge/model/surge.py", line 751, in _scoring
+2025-09-28 18:47:58.979494     encoder_output, e_emb, self_pred_loss = self._get_encoder_output(p_emb, t_emb, ids, gt_ent, gt_rel, gt_tim, t_ids)
+2025-09-28 18:47:58.979497   File "/home/disk2/sjw/TKGElib-baseline/kge/model/surge.py", line 652, in _get_encoder_output
+2025-09-28 18:47:58.979499     ctx_list = ctx_list.to(device)
+2025-09-28 18:47:58.979501 KeyboardInterrupt
