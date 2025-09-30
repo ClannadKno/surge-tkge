@@ -8,6 +8,7 @@ The repo requires python>=3.7, anaconda and a new env is recommended.
 conda create -n surge python=3.7 -y # optional
 conda activate surge # optional
 pip install -e .
+conda install -c dglteam/label/cu118 dgl
 ```
 
 ### Data
