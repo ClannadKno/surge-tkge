@@ -1,4 +1,4 @@
-<h1 align="center">SURGE</h1>
+<h1 align="center">SURGE: Subgraph‑Unified Reasoning with Generative Evolution for Temporal Knowledge Graphs</h1>
 
 ## Installation
 
